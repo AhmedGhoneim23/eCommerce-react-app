@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
-import MainLayout from "./layouts/MainLayout";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import AppRouter from "@routes/AppRouter";
+import "@styles/global.css";
 
-
-createRoot(document.getElementById("root")!).render(<MainLayout/>);
+createRoot(document.getElementById("root")!).render(<AppRouter />);
