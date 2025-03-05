@@ -7,7 +7,7 @@ type TRenderProps<T> = {
 const GridList = <T extends {id?: number}>({records, renderItem}: TRenderProps<T>) => {
   const categoriesList =
     records.length > 0
-      ? records.map((record) => (
+      ? records.map((record) =>  (
           <Col
             xs={6}
             md={3}
