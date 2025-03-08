@@ -1,4 +1,3 @@
-import { Container } from "react-bootstrap";
 import Product from "@components/eCommerce/Product/Product";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
@@ -6,10 +5,20 @@ import { actGetProducts, productsCleanUp } from "@store/products/productsSlice";
 import { useParams } from "react-router-dom";
 import Loading from "@components/feedback/loading/Loading";
 import GridList from "@components/common/GridList/GridList";
+import Heading from "@components/common/Heading/Heading";
+import { Container } from "react-bootstrap";
 const Products = () => {
   const { prefix } = useParams();
   const dispatch = useAppDispatch();
   const { loading, error, records } = useAppSelector((state) => state.products);
+  const cartItems = useAppSelector((state) => state.cart.items);
+
+  const productFullInfo = records.map((record) => {
+    return {
+      ...record,
+      quantity: cartItems[record.id] || 0,
+    };
+  });
 
   useEffect(() => {
     dispatch(actGetProducts(prefix as string));
@@ -20,13 +29,14 @@ const Products = () => {
 
   return (
     <Container>
+      <Heading>{prefix} Product</Heading>
       <Loading loading={loading} error={error}>
         <GridList
-          records={records}
+          records={productFullInfo}
           renderItem={(records) => <Product {...records} />}
         />
       </Loading>
-    </Container>
+      </Container>
   );
 };
 

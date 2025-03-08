@@ -14,7 +14,7 @@
 .product h2 {
   font-size: 17px;
   margin-top: 9px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -23,4 +23,10 @@
 
 .product h3 {
   font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.maximumNotice {
+  font-size: 12px;
+  margin-bottom: 7px;
 }
