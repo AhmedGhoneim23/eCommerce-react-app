@@ -1,0 +1,35 @@
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #d4d4d6;
+}
+.product {
+  display: flex;
+}
+.productImg {
+  height: 180px;
+  width: 150px;
+  background-color: #f3efefe1;
+}
+
+.productImg img {
+  height: 100%;
+  overflow: hidden;
+}
+.productInfo {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.product h3 {
+  font-size: 13px;
+}
