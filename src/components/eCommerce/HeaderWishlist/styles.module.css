@@ -1,21 +1,24 @@
-.basketContainer {
+.wishlistContainer {
   cursor: pointer;
   align-self: flex-end;
   display: flex;
   align-items: center;
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #111 ;
 }
 
-.basketCart {
+.wishlistLogoContainer  {
   position: relative;
 }
 
 .logo {
   width: 25px;
-  margin-right: 2px;
 }
 
 h3 {
   font-size: 17px;
+  margin-left: 1px;
   margin-bottom: 0;
 }
 
@@ -24,16 +27,13 @@ h3 {
   height: 20px;
   color: rgb(10, 2, 5);
   width: 20px;
-  border-radius: 50%;
+  border-radius: 10px;
   text-align: center;
   border: 1px solid;
   position: absolute;
-  top: -15px;
+  top: -17px;
   right: -2px;
   font-size: 11px;
-}
-.hidden {
-  display: none;
 }
 
 .pumpCartQuantity {

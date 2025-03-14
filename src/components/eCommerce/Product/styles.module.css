@@ -2,6 +2,13 @@
   width: 120px;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.likeContainer{
+  position: absolute;
+  top: 5px;
+  right: 1px;
+  cursor: pointer;  
 }
 
 .productImg img {

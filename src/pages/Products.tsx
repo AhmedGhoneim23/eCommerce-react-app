@@ -12,11 +12,13 @@ const Products = () => {
   const dispatch = useAppDispatch();
   const { loading, error, records } = useAppSelector((state) => state.products);
   const cartItems = useAppSelector((state) => state.cart.items);
+  const wishListItemsId = useAppSelector((state) => state.wishlist.itemsId);
 
-  const productFullInfo = records.map((record) => {
+  const productFullInfo = records.map((el) => {
     return {
-      ...record,
-      quantity: cartItems[record.id] || 0,
+      ...el,
+      quantity: cartItems[el.id] || 0,
+      isLiked: wishListItemsId.includes(el.id)
     };
   });
 

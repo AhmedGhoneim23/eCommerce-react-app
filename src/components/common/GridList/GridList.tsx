@@ -17,7 +17,7 @@ const GridList = <T extends {id?: number}>({records, renderItem}: TRenderProps<T
             {renderItem(record)} 
           </Col>
         ))
-      : "there are no categories";
+      : "There Are No Items";
   return (
     <Row>{categoriesList}</Row>
   )

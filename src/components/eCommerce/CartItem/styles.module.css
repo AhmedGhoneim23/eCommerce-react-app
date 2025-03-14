@@ -10,14 +10,13 @@
   display: flex;
 }
 .productImg {
-  height: 180px;
-  width: 150px;
-  background-color: #f3efefe1;
+  
 }
 
 .productImg img {
-  height: 100%;
-  overflow: hidden;
+  height: 180px;
+  width: 150px;
+  background-color: #f3efefe1;
 }
 .productInfo {
   margin-left: 10px;
