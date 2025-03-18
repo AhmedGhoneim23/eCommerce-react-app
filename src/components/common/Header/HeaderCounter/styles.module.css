@@ -5,14 +5,13 @@
   align-items: center;
 }
 
+
 .basketCart {
   position: relative;
-}
-
-.logo {
   width: 25px;
   margin-right: 2px;
 }
+
 
 h3 {
   font-size: 17px;

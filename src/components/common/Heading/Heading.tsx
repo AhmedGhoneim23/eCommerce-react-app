@@ -1,10 +1,10 @@
-const Heading = ({ children }: { children: React.ReactNode }) => {
+const Heading = ({ title }: { title: string }) => {
   return (
     <h2
       className="mb-3"
-      style={{ fontSize: "26px", textTransform: "capitalize" }}
+      style={{ fontSize: "26px", textTransform: "capitalize", }}
     >
-      {children}
+      {title}
     </h2>
   );
 };

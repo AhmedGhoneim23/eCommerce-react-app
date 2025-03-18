@@ -1,8 +1,6 @@
 import { Container } from "react-bootstrap";
-
 import styles from "./styles.module.css";
-import Header from "@components/common/Header/Header";
-import Footer from "@components/common/Footer/Footer";
+import { Header,Footer } from "@components/common/index";
 import { Outlet } from "react-router-dom";
 
 
