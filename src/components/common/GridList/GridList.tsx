@@ -1,10 +1,12 @@
+import LottieHandler from "@components/feedback/LottieHandler/LottieHandler";
 import { Col, Row } from "react-bootstrap";
 
 type TRenderProps<T> = {
   records: T[];
   renderItem: (records:T) => React.ReactNode;
+  message: string;
 }
-const GridList = <T extends {id?: number}>({records, renderItem}: TRenderProps<T>) => {
+const GridList = <T extends {id?: number}>({records, renderItem, message}: TRenderProps<T>) => {
   const categoriesList =
     records.length > 0
       ? records.map((record) =>  (
@@ -17,7 +19,7 @@ const GridList = <T extends {id?: number}>({records, renderItem}: TRenderProps<T
             {renderItem(record)} 
           </Col>
         ))
-      : "There Are No Items";
+      : <LottieHandler type="empty" message={message} />;
   return (
     <Row>{categoriesList}</Row>
   )
